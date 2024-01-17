@@ -1,0 +1,78 @@
+.nav {
+    background: #222;
+    height: 75px;
+}
+
+.navbar {
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-pannel {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.navbar-logo {
+    width: 112px;
+}
+
+.navbar-buttons {
+    width: 168px;
+    position: relative;
+}
+
+.navbar-buttons button:last-child {
+    margin-right: 13px;
+}
+
+.cart-counter {
+    position: absolute;
+    top: -9px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background: #F16D7F;
+    border-radius: 100%;
+    color: #FFF;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* @media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (max-width: 375px) {
+    
+} */
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        margin: auto 32px;
+    }
+    .navbar-buttons button:last-child {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navbar {
+        margin: auto 16px;
+    }
+    .navbar-buttons {
+       width: auto; 
+    }
+    .navbar-buttons button {
+        display: none;
+    }
+    .navbar-buttons button:first-child {
+        display: block;
+    }
+}
