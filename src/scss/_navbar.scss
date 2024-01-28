@@ -1,0 +1,46 @@
+.nav {
+    background: $textCommonAlternate;
+    height: 75px;
+}
+
+.navbar {
+    display: flex;
+    height: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &-pannel {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;       
+    }
+
+    &-logo {
+        width: 112px;
+    }
+
+    &-buttons {
+        width: 168px;
+        position: relative;
+
+        button:last-child {
+            margin-right: 13px;
+        }
+    }
+}
+
+.cart-counter {
+    position: absolute;
+    top: -9px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background: $firstActiveColor;
+    border-radius: 100%;
+    color: $bodyColor;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

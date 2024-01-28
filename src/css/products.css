@@ -27,9 +27,12 @@
 }
 
 .product {
-    position: relative;
     width: 360px;
     background: #F8F8F8;
+}
+
+.product-add-to-cart-area {
+    position: relative;
 }
 
 .product:hover .product-cart-container {

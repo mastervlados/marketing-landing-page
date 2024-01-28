@@ -1,0 +1,133 @@
+.landing-footer {
+    background: $bodyDarkColor;
+}
+
+.feature {
+    height: 341px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    &-box {
+        width: 360px;
+        text-align: center;      
+    }
+
+    &-title {
+        margin: 28px 0 16px 0;
+        color: $textCommonLight;
+        font-size: 20px;
+    }
+
+    &-description {
+        color: $textCommonLight;
+        font-weight: 300;
+    }
+}
+
+.subscribe {
+    height: 448px;
+    background: $boxColorAlternate url('../img/subscribe.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-container {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    &-photo {
+        text-align: center;
+    }
+
+    &-quote {
+        margin-top: 30px;
+        color: $bodyDarkColor;
+        font-size: 20px;
+        font-style: italic;
+        width: 360px;
+
+        span {
+            color: inherit;
+            font-size: inherit;
+            font-style: normal;
+        }
+    }
+
+    &-form {
+        text-align: center;
+    }
+
+    &-header {
+        color: $bodyDarkColor;
+        font-size: 18px;
+        line-height: 167%;
+
+        span {
+            display: block;
+            font-size: 24px;
+            font-weight: 700;
+        }
+    }
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32px;
+
+    input {
+        border: none;
+        background: $inputBackgroundColor;
+        width: 256px;
+        height: 49px;
+        padding: 0 22px;
+        border-radius: 30px 0 0 30px;
+    }
+}
+
+.form-button-end {
+    background: $firstActiveColor;
+    color: $bodyColor;
+    border-radius: 0 30px 30px 0;
+    width: 100px;
+    height: 49px;
+}
+
+.copyright {
+    height: 79px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+        color: $textCommonLight;
+        font-size: 16px;
+    }
+}
+
+.social {
+
+    &-link {
+        display: inline-block;
+        margin-left: 8px;
+    }
+
+    &-button {
+        width: 32px;
+        height: 32px;
+        background: $bodyColor;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: $firstActiveColor;
+        }
+    }
+}

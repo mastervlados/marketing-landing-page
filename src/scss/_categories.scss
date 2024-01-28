@@ -1,0 +1,31 @@
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    margin: 65px 0 95px 0;
+}
+
+.category {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-details {
+        position: absolute;
+        text-align: center;
+    }
+
+    &-label {
+        font-size: 16px;
+        color: $bodyColor;
+    }
+
+    &-name {
+        font-size: 24px;
+        color: $firstActiveColor;
+        font-weight: 700;
+    }
+}

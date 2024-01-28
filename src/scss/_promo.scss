@@ -1,0 +1,49 @@
+.promo {
+    height: 764px;
+    background: $bodyColorAlternate;
+
+    &-container {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+
+        .promo-column {
+            width: 50%;
+            display: flex;
+            align-items: center;   
+        }
+    }
+
+    &-image {
+        position: absolute;
+        display: block;
+        left: -250px;
+        bottom: 0;  
+    }
+
+    &-label {
+        border-left: 12px solid $firstActiveColor;
+        padding-left: 16px;
+        width: 405px;
+    }
+
+    &-header {
+        color: $textCommonAlternate;
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    &-huge {
+        display: block;
+        font-size: 48px;
+        font-weight: 900;   
+    }
+
+    &-accent {
+        color: $firstActiveColor;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+}
