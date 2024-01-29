@@ -11,6 +11,7 @@
 
 body {
     background: $bodyColor;
+    overflow: hidden;
 }
 
 .wrapper {
@@ -55,4 +56,12 @@ body {
 .button-svg {
     width: 26px;
     margin-right: 10px;
+}
+
+details > summary {
+    list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+    display: none;
 }

@@ -1,0 +1,210 @@
+.filters {
+    // border: 1px solid brown;
+
+    &-panel {
+        position: relative;
+        margin-top: 40px;
+    }
+}
+
+.filter {
+
+    &-label {
+        color: #6F6E6E;
+
+        & path {
+            fill: #6F6E6E; 
+        }
+    }
+
+    &-details {
+        padding: 13px 16px;
+        box-sizing: border-box;
+        width: 360px;
+        min-height: 531px;
+        position: absolute;
+
+        &[open] {
+            background: $bodyColor;
+            z-index: 444;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            .filter-label, path {
+                color: $firstActiveColor;
+                fill: $firstActiveColor;
+            }
+        }
+
+        &-within {
+
+            &[open] {
+                & .filter-summary-within {
+                    color: $firstActiveColor;
+                }
+            }
+        }
+    }
+
+    &-summary {
+        cursor: pointer;
+        display: flex;
+        align-items: baseline;
+        width: 70px;
+        gap: 9px;
+
+        &-within {
+            cursor: pointer;
+            color: #6F6E6E;
+            border-bottom: thin solid #EBEBEB;
+            border-left: 5px solid $firstActiveColor;
+            padding: 9px 11px;
+            margin-bottom: 19px;
+        }
+    }
+
+    &-box {
+        margin-top: 16px;
+
+        &-within {
+          margin: 25px 16px;
+          list-style: none; 
+          display: flex;
+          flex-direction: column;
+          gap: 11px
+        }
+    }
+
+    &-link {
+        color: #6F6E6E;
+
+        &:hover {
+            color: $firstActiveColor;
+        }
+    }
+}
+
+.group-filters {
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 13px auto;
+    text-align: center;
+    width: 360px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 555;
+}
+
+.simple {
+
+    &-summary {
+        cursor: pointer;
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+        margin-right: 20px;
+        align-items: center;
+        & span {
+            color: #6F6E6E;
+        }
+
+        & path {
+            fill: #6F6E6E;
+        }
+
+        &:hover {
+            & span {
+                color: $firstActiveColor;
+            }
+    
+            & path {
+                fill: $firstActiveColor;
+            }
+        }
+        
+    }
+    
+    &-box {
+        background: $bodyColor;
+        z-index: 666;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        min-height: 103px;
+        box-sizing: border-box;
+        padding: 9px;
+        text-align: left;
+
+        &-checkbox-container {
+            margin-bottom: 6px;
+
+            &:nth-last-child(1) {
+                margin-bottom: 0;
+            }
+        }
+
+        &-checkbox {
+            display: none;
+
+            &:not(:disabled):not(:checked) + .simple-box-label:hover::before {
+                border-color: $firstActiveColor;
+            }
+            &:not(:disabled):not(:checked) + .simple-box-label:hover {
+                color: $firstActiveColor;
+            }
+            &:not(:disabled):checked + .simple-box-label::before {
+                border-color: $firstActiveColor;
+                background: $firstActiveColor;
+            }
+            &:not(:disabled):checked + .simple-box-label {
+                color: $firstActiveColor;
+            }
+        }
+
+        &-label {
+            cursor: pointer;
+            color: #6F6E6E;
+            position: relative;
+            padding-left: 13px + 9px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 13px;
+                height: 13px;
+                border: 1px solid #EBEBEB;
+            }
+
+        }
+    }
+}
+
+#burger {
+    position: absolute;
+    left: -999999px;
+    visibility: hidden;
+
+    &:checked + .menu {
+        right: 0;
+    }
+
+    &:not(:checked) + .menu {
+        right: -$widthBurgerMenu;
+    }
+}
+
+.burger-label {
+    cursor: pointer;
+}
+
+.menu {
+    width: $widthBurgerMenu;
+    min-height: 634px;
+    position: absolute;
+    background: $bodyColor;
+    z-index: 777;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-sizing: border-box;
+    transition: right .3s;
+}
