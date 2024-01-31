@@ -11,7 +11,7 @@
 
 body {
     background: $bodyColor;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -26,6 +26,23 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    &-primary {
+        box-sizing: border-box;
+        color: $bodyColor;
+        font-weight: 300;
+        font-size: 16px;
+        background: $firstActiveColor;
+        border: 1px solid $firstActiveColor;
+        padding: 16px 41px 15px 41px;
+    }
+
+    &-primary:hover {
+        background: transparent;
+        border-color: $bodyDarkColor;
+        color: $bodyDarkColor;
+        transition-duration: .3s;
+    }
 
     &-primary-outline {
         padding: 14px 38px;
@@ -51,6 +68,26 @@ body {
         justify-content: center;
         align-items: center;
     }
+
+    &-default-outline {
+        border: 1px solid #A4A4A4;
+        background: $bodyColor;
+        color: #A4A4A4;
+        padding: 17px 40px 16px 40px;
+        font-weight: 300;
+    }
+
+    &-default-outline:hover {
+        border: 1px solid $firstActiveColor;
+        color: $firstActiveColor;
+        transition-duration: .3s;
+    }
+
+    &-small {
+        color: #4A4A4A;
+        font-size: 11px;
+        padding: 8px 15px 10px 15px;
+    }
 }
 
 .button-svg {
@@ -64,4 +101,15 @@ details > summary {
 
 details > summary::-webkit-details-marker {
     display: none;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+ 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	display: none;
 }

@@ -11,7 +11,7 @@
 
 body {
   background: #FFF;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -26,6 +26,21 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+.btn-primary {
+  box-sizing: border-box;
+  color: #FFF;
+  font-weight: 300;
+  font-size: 16px;
+  background: #F26376;
+  border: 1px solid #F26376;
+  padding: 16px 41px 15px 41px;
+}
+.btn-primary:hover {
+  background: transparent;
+  border-color: #222224;
+  color: #222224;
+  transition-duration: 0.3s;
 }
 .btn-primary-outline {
   padding: 14px 38px;
@@ -49,6 +64,23 @@ body {
   justify-content: center;
   align-items: center;
 }
+.btn-default-outline {
+  border: 1px solid #A4A4A4;
+  background: #FFF;
+  color: #A4A4A4;
+  padding: 17px 40px 16px 40px;
+  font-weight: 300;
+}
+.btn-default-outline:hover {
+  border: 1px solid #F26376;
+  color: #F26376;
+  transition-duration: 0.3s;
+}
+.btn-small {
+  color: #4A4A4A;
+  font-size: 11px;
+  padding: 8px 15px 10px 15px;
+}
 
 .button-svg {
   width: 26px;
@@ -60,6 +92,17 @@ details > summary {
 }
 
 details > summary::-webkit-details-marker {
+  display: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
   display: none;
 }
 
@@ -652,4 +695,156 @@ details > summary::-webkit-details-marker {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   box-sizing: border-box;
   transition: right 0.3s;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 96px 0 128px 0;
+}
+.cart-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 72px;
+}
+.cart-form-box {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 57px;
+}
+
+.cart-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.cart-card {
+  background: #FFF;
+  box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: row;
+  height: 306px;
+}
+.cart-card-image {
+  max-width: 262px;
+}
+.cart-card-details {
+  padding: 22px 31px;
+  width: 390px;
+  position: relative;
+}
+.cart-card-delete {
+  position: absolute;
+  right: 22px;
+  top: 28px;
+}
+.cart-card-item-title {
+  color: #222;
+  font-size: 24px;
+  max-width: 262px;
+  margin-bottom: 42px;
+}
+.cart-card-item-property {
+  margin-bottom: 6px;
+}
+.cart-card-item-property:nth-last-child(1) {
+  margin-bottom: 0px;
+}
+.cart-card-item-label {
+  color: #575757;
+  font-size: 22px;
+}
+.cart-card-item-label::after {
+  content: " ";
+}
+.cart-card-item-value {
+  font-size: 22px;
+  color: #6F6E6E;
+}
+.cart-card-item-value-accent {
+  font-size: 22px;
+  color: #F26376;
+}
+.cart-card-item-counter {
+  margin-left: 24px;
+  border: 1px solid #EAEAEA;
+  color: #656565;
+  font-size: 18px;
+  width: 44px;
+  height: 25px;
+  text-align: center;
+}
+
+.shipping {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.shipping-header {
+  color: #222;
+  font-weight: 300;
+  font-size: 16px;
+}
+.shipping-input {
+  border: 1px solid #A4A4A4;
+  color: #222;
+  padding: 12px 16px 14px 16px;
+  font-size: 13px;
+}
+.shipping-input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #B1B1B1;
+  opacity: 1;
+}
+.shipping-input::placeholder { /* Most modern browsers support this now. */
+  color: #B1B1B1;
+}
+.shipping-input:focus {
+  color: #F26376;
+  border-color: #F26376;
+  transition-duration: 0.3s;
+}
+.shipping-submit-button {
+  width: 110px;
+}
+
+.total {
+  background: #F5F3F3;
+  padding: 39px 37px 42px 37px;
+  text-align: right;
+}
+.total-sub {
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+  margin-bottom: 12px;
+}
+.total-sub span {
+  font-size: 11px;
+  color: #4A4A4A;
+}
+.total-grand {
+  display: flex;
+  gap: 30px;
+  justify-content: end;
+}
+.total-grand span {
+  font-size: 16px;
+  color: #222;
+  font-weight: 300;
+}
+.total-grand-accent {
+  font-weight: 700 !important;
+  color: #F26376 !important;
+}
+.total-hr {
+  border: thin solid #E2E2E2;
+  width: 275px;
+  margin: 21px auto 17px auto;
+}
+.total-button-position {
+  margin: 0 auto;
 }
