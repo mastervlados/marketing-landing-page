@@ -110,40 +110,6 @@
         font-size: 16px;
     }
 
-    &-input {
-        border: 1px solid #A4A4A4;
-        color: $textCommonAlternate;
-        padding: 12px 16px 14px 16px;
-        font-size: 13px;
-
-        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-            color: $textPlaceholder;
-        }
-        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-           color: $textPlaceholder;
-           opacity:  1;
-        }
-        &::-moz-placeholder { /* Mozilla Firefox 19+ */
-           color: $textPlaceholder;
-           opacity:  1;
-        }
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-           color: $textPlaceholder;
-        }
-        &::-ms-input-placeholder { /* Microsoft Edge */
-           color: $textPlaceholder;
-        }
-        &::placeholder { /* Most modern browsers support this now. */
-           color: $textPlaceholder;
-        }
-    }
-
-    &-input:focus {
-        color: $firstActiveColor;
-        border-color: $firstActiveColor;
-        transition-duration: .3s;
-    }
-
     &-submit-button {
         width: 110px;
     }

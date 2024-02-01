@@ -113,3 +113,45 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
 	display: none;
 }
+
+.input {
+    &-primary {
+        border: 1px solid #A4A4A4;
+        color: $textCommonAlternate;
+        padding: 12px 16px;
+        font-size: 13px;
+    
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: $textPlaceholder;
+            font-weight: 300;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color: $textPlaceholder;
+           opacity:  1;
+           font-weight: 300;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color: $textPlaceholder;
+           opacity:  1;
+           font-weight: 300;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: $textPlaceholder;
+           font-weight: 300;
+        }
+        &::-ms-input-placeholder { /* Microsoft Edge */
+           color: $textPlaceholder;
+           font-weight: 300;
+        }
+        &::placeholder { /* Most modern browsers support this now. */
+           color: $textPlaceholder;
+           font-weight: 300;
+        }
+    }
+    
+    &-primary:focus {
+        color: $firstActiveColor;
+        border-color: $firstActiveColor;
+        transition-duration: .3s;
+    }
+}
