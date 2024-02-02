@@ -72,3 +72,34 @@
         font-size: 16px;
     }
 }
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .products {
+        max-width: 736px;
+        margin: 0 auto;
+        gap: 16px;
+    }
+    .products-header {
+        margin-bottom: 73px;
+    }
+    .products-footer {
+        margin-top: 32px;
+        margin-bottom: 65px;
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+    .products {
+        justify-content: space-around;
+        margin: 0 auto;
+        gap: 0;
+        row-gap: 16px
+    }
+    .products-header {
+        margin-bottom: 64px;
+    }
+    .products-footer {
+        margin-top: 40px;
+        margin-bottom: 96px;
+    }
+}

@@ -131,3 +131,49 @@
         }
     }
 }
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .feature {
+        height: 610px;
+        flex-direction: column;
+    }
+    .subscribe {
+        height: 614px;
+        background-size: cover;
+        background-position: left;
+        background-position-x: -360px;
+    }
+    .subscribe-container {
+        flex-direction: column;
+        justify-content: normal;
+        row-gap: 48px;
+        padding-top: 64px;
+    }  
+    .copyright {
+        padding: 0 32px;
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+    .feature-box {
+        width: 320px;
+    }
+    .subscribe {
+        height: 610px;
+        background-position-x: -480px;
+    }
+    .subscribe-container {
+        row-gap: 59px;
+        padding-top: 64px;
+    }  
+    .form-button-end {
+        width: 95px;
+    }
+    .email input {
+        width: 200px;
+    }
+    .copyright {
+        flex-direction: column-reverse;
+        padding: 43px 10px;
+    }
+}

@@ -47,3 +47,54 @@
         font-weight: inherit;
     }
 }
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .promo {
+        height: 367px;
+
+        &-image {
+            width: 386px;
+            left: -10px;
+        }
+
+        &-header {
+            font-size: 24px;
+        }
+
+        &-huge {
+            font-size: 44px; 
+        }
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+    .promo {
+        height: 363px;
+
+        &-image {
+            display: none;
+        }
+
+        &-label {
+            padding-left: 15px;
+            width: 263px;
+            margin: 0 0 0 12px; 
+        }
+
+        &-header {
+            font-size: 20px;
+        }
+
+        &-huge {
+            font-size: 38px;  
+        }
+    }
+
+    .promo-container .promo-column:nth-child(2) {
+        display: none;
+    }
+    .promo-container .promo-column {
+        width: 100%;
+        justify-content: center;
+    }
+}

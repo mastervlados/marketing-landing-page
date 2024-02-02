@@ -29,3 +29,32 @@
         font-weight: 700;
     }
 }
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .categories {
+        width: 736px;
+        margin-left: auto;
+        margin-right: auto;
+        row-gap: 20px;
+    }
+    .category-image {
+        width: 232px;
+    }
+    .category-lazy .category-image {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+    .categories {
+        width: 343px;
+        row-gap: 32px;
+    }
+    .category-image {
+        width: 343px;
+    }
+    .category-lazy .category-image {
+        object-fit: cover;
+        height: 111px;
+    }
+}

@@ -44,3 +44,27 @@
     justify-content: center;
     align-items: center;
 }
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .navbar {
+        margin: auto 32px;
+    }
+    .navbar-buttons button:last-child {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+    .navbar {
+        margin: auto 16px;
+    }
+    .navbar-buttons {
+       width: auto; 
+    }
+    .navbar-buttons button {
+        display: none;
+    }
+    .navbar-buttons button:first-child {
+        display: block;
+    }
+}
