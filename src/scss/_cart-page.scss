@@ -159,3 +159,110 @@
         margin: 0 auto;
     }
 }
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .cart {
+        margin: 60px 16px 128px 16px;
+
+        &-container {
+            flex-direction: column;
+        }
+    }
+
+    .cart-card {
+
+        &-delete {
+            right: 24px;
+        }
+    }
+
+    .cart-options {
+        width: (225px * 2) + 48px;
+        margin: 64px auto;
+    }
+
+    .cart-form-box {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .shipping {
+        box-sizing: border-box;
+        min-width: 360px;
+    }
+
+    .total {
+        box-sizing: border-box;
+        min-width: 360px;
+        margin-top: 37px;
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+    .cart {
+        margin: 40px 10px 96px 10px;
+
+        &-options {
+            width: 100%;
+
+            & > button {
+                width: 175px;
+                font-size: 12px;
+                padding: 9px 18px;
+            }
+        }
+
+        &-card {
+
+            height: 188px;
+
+            &-image {
+                width: 143px;
+            }
+
+            &-delete {
+                top: 17px;
+                right: 12px;
+
+                & svg {
+                    width: 10px;
+                }
+            }
+
+            &-item {
+
+                &-title {
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+
+                &-label {
+                    font-size: 14px;
+                }
+
+                &-value {
+                    font-size: 14px;
+                    &-accent {
+                        font-size: 14px;
+                    }
+                }
+
+                &-counter {
+                    font-size: 12px;
+                    width: 24px;
+                    height: 15px;
+                }
+            }
+        }
+    }
+
+    .cart-form-box {
+        flex-direction: column;
+        gap: 48px;
+    }
+    .total {
+        margin-top: 0;
+    }
+}

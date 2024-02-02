@@ -24,7 +24,7 @@
         width: 360px;
 
         & input[type=text] {
-            width: inherit;
+            width: auto;
         }
         
         &__submit {
@@ -138,4 +138,39 @@
     &__item:not(:last-child) {
         margin-bottom: 16px;
     }
+}
+
+@media screen and (max-width: $mediaTabletWidth) {
+    .registration {
+        margin: 40px 16px 96px 16px;
+    }
+
+    .perks {
+
+        width: 354px;
+    
+        &__header {
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+    
+        &__text {
+            font-size: 16px;
+        }
+    
+        &__item {
+            font-size: 16px;
+            & svg {
+                margin-right: 23px;
+            }
+        }
+    
+        &__item:not(:last-child) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: $mediaMobileWidth) {
+
 }

@@ -713,6 +713,48 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 22px;
 }
 
+@media screen and (max-width: 768px) {
+  .nav-panel-container {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .product-presenter-backyard {
+    height: 624px;
+  }
+  .product-presenter-image {
+    width: 466px;
+    padding: 30px 0;
+  }
+  .details-box {
+    margin-bottom: 130px;
+  }
+  .space-between {
+    margin-bottom: 130px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .nav-panel-container {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 0;
+  }
+  .nav-panel-breadcrumbs {
+    margin-bottom: 50px;
+  }
+  .product-presenter-backyard {
+    height: 624px;
+  }
+  .product-presenter-image {
+    width: 100vw;
+    padding: 85px 0;
+  }
+  .space-between {
+    margin-bottom: 64px;
+  }
+}
 .filters-panel {
   position: relative;
   margin-top: 40px;
@@ -882,6 +924,69 @@ input[type=number]::-webkit-inner-spin-button {
   transition: right 0.3s;
 }
 
+.pagination {
+  width: 280px;
+  margin: 48px auto 96px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(235, 235, 235);
+  list-style: none;
+}
+.pagination__button {
+  padding: 15px;
+}
+.pagination__li {
+  color: #C4C4C4;
+}
+.pagination__separator {
+  color: #C4C4C4;
+  margin-left: -14px;
+  margin-right: -14px;
+}
+.pagination__link {
+  color: #C4C4C4;
+  display: block;
+}
+.pagination__link:hover {
+  color: #F26376;
+}
+.pagination__link_active {
+  color: #F26376;
+}
+
+@media screen and (max-width: 768px) {
+  .filters-panel {
+    height: 80px;
+  }
+  .group-filters {
+    margin-right: 0;
+  }
+  .pagination {
+    margin: 40px auto 63px auto;
+  }
+}
+@media screen and (max-width: 375px) {
+  .group-filters {
+    width: 250px;
+    justify-content: space-between;
+  }
+  .filter-label {
+    display: none;
+  }
+  .filter-summary svg {
+    width: 37px;
+    height: 25px;
+  }
+  .simple-summary {
+    gap: 7px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .simple-summary span {
+    font-size: 12px;
+  }
+}
 .cart-container {
   display: flex;
   flex-direction: row;
@@ -1016,6 +1121,87 @@ input[type=number]::-webkit-inner-spin-button {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 768px) {
+  .cart {
+    margin: 60px 16px 128px 16px;
+  }
+  .cart-container {
+    flex-direction: column;
+  }
+  .cart-card-delete {
+    right: 24px;
+  }
+  .cart-options {
+    width: 498px;
+    margin: 64px auto;
+  }
+  .cart-form-box {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0;
+  }
+  .shipping {
+    box-sizing: border-box;
+    min-width: 360px;
+  }
+  .total {
+    box-sizing: border-box;
+    min-width: 360px;
+    margin-top: 37px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cart {
+    margin: 40px 10px 96px 10px;
+  }
+  .cart-options {
+    width: 100%;
+  }
+  .cart-options > button {
+    width: 175px;
+    font-size: 12px;
+    padding: 9px 18px;
+  }
+  .cart-card {
+    height: 188px;
+  }
+  .cart-card-image {
+    width: 143px;
+  }
+  .cart-card-delete {
+    top: 17px;
+    right: 12px;
+  }
+  .cart-card-delete svg {
+    width: 10px;
+  }
+  .cart-card-item-title {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .cart-card-item-label {
+    font-size: 14px;
+  }
+  .cart-card-item-value {
+    font-size: 14px;
+  }
+  .cart-card-item-value-accent {
+    font-size: 14px;
+  }
+  .cart-card-item-counter {
+    font-size: 12px;
+    width: 24px;
+    height: 15px;
+  }
+  .cart-form-box {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .total {
+    margin-top: 0;
+  }
+}
 .registration {
   margin: 64px 0 96px 0;
   display: flex;
@@ -1029,7 +1215,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 360px;
 }
 .registration-form input[type=text] {
-  width: inherit;
+  width: auto;
 }
 .registration-form__submit {
   display: flex;
@@ -1134,4 +1320,29 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .perks__item:not(:last-child) {
   margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .registration {
+    margin: 40px 16px 96px 16px;
+  }
+  .perks {
+    width: 354px;
+  }
+  .perks__header {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+  .perks__text {
+    font-size: 16px;
+  }
+  .perks__item {
+    font-size: 16px;
+  }
+  .perks__item svg {
+    margin-right: 23px;
+  }
+  .perks__item:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
