@@ -202,10 +202,18 @@
 
 @media screen and (max-width: $mediaMobileWidth) {
     .cart {
-        margin: 40px 10px 96px 10px;
+        width: calc(100vw - 20px);
+        margin: 0 auto;
+
+        &-container {
+            margin-top: 40px;
+            margin-bottom: 96px;
+        }
 
         &-options {
-            width: 100%;
+            width: calc(100vw - 20px);
+            margin-top: 30px;
+            margin-bottom: 48px;
 
             & > button {
                 width: 175px;
@@ -264,5 +272,13 @@
     }
     .total {
         margin-top: 0;
+    }
+
+    .shipping {
+
+        &__textinput {
+            max-width: calc(100vw - 20px);
+        }
+        
     }
 }

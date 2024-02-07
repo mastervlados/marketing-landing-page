@@ -172,5 +172,13 @@
 }
 
 @media screen and (max-width: $mediaMobileWidth) {
-
+    .registration {
+        flex-direction: column;
+        gap: 40px;
+        width: calc(100vw - (8px * 2));
+        margin: 40px auto 100px auto;
+    }
+    .form-box {
+        width: calc(100vw - (8px * 2));
+    }
 }

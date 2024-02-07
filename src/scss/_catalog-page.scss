@@ -187,10 +187,12 @@
 
     &:checked + .menu {
         right: 0;
+        display: block;
     }
 
     &:not(:checked) + .menu {
         right: -$widthBurgerMenu;
+        display: none;
     }
 }
 

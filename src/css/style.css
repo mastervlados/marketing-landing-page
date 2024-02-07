@@ -107,6 +107,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-primary {
+  box-sizing: border-box;
   border: 1px solid #A4A4A4;
   color: #222;
   padding: 12px 16px;
@@ -170,7 +171,7 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100%;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .categories {
     width: 343px;
     row-gap: 32px;
@@ -322,7 +323,7 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 0 32px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .feature-box {
     width: 320px;
   }
@@ -396,7 +397,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin-left: 20px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .navbar {
     margin: auto 16px;
   }
@@ -486,7 +487,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin-bottom: 65px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .products {
     justify-content: space-around;
     margin: 0 auto;
@@ -559,7 +560,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 44px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .promo {
     height: 363px;
   }
@@ -681,21 +682,25 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .details-box-little-header {
   color: #F16D7F;
+  font-weight: 300;
 }
 .details-box-header {
   color: #4D4D4D;
   font-size: 18px;
+  font-weight: 300;
 }
 .details-box-description {
   color: #5E5E5E;
   width: 555px;
   text-align: center;
   margin-top: 48px;
+  font-weight: 300;
 }
 .details-box-cost {
   color: #EF5B70;
   font-size: 24px;
   margin-top: 32px;
+  font-weight: 300;
 }
 .details-box-selectors {
   display: flex;
@@ -732,27 +737,51 @@ input[type=number]::-webkit-inner-spin-button {
     margin-bottom: 130px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .nav-panel-container {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     margin-left: 0;
     margin-right: 0;
-    padding: 20px 0;
   }
   .nav-panel-breadcrumbs {
-    margin-bottom: 50px;
+    margin-top: 32px;
   }
   .product-presenter-backyard {
     height: 624px;
+    z-index: 444;
+    background-color: transparent;
   }
   .product-presenter-image {
     width: 100vw;
     padding: 85px 0;
+    background-color: #F7F7F7;
+    z-index: 1;
   }
   .space-between {
     margin-bottom: 64px;
+  }
+  .details-box {
+    padding: 65px 24px;
+  }
+  .details-box-separate-line {
+    width: 175px;
+    margin-top: 32px;
+    margin-bottom: 50px;
+  }
+  .details-box-description {
+    margin-top: 32px;
+    width: 326px;
+  }
+  .details-box-selectors {
+    margin-bottom: 64px;
+  }
+  .details-box-selector {
+    font-size: 12px;
+  }
+  .details-box-selector svg {
+    margin-left: 0;
   }
 }
 .filters-panel {
@@ -904,9 +933,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 #burger:checked + .menu {
   right: 0;
+  display: block;
 }
 #burger:not(:checked) + .menu {
   right: -232px;
+  display: none;
 }
 
 .burger-label {
@@ -966,7 +997,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 40px auto 63px auto;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .group-filters {
     width: 250px;
     justify-content: space-between;
@@ -1151,12 +1182,19 @@ input[type=number]::-webkit-inner-spin-button {
     margin-top: 37px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .cart {
-    margin: 40px 10px 96px 10px;
+    width: calc(100vw - 20px);
+    margin: 0 auto;
+  }
+  .cart-container {
+    margin-top: 40px;
+    margin-bottom: 96px;
   }
   .cart-options {
-    width: 100%;
+    width: calc(100vw - 20px);
+    margin-top: 30px;
+    margin-bottom: 48px;
   }
   .cart-options > button {
     width: 175px;
@@ -1200,6 +1238,9 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .total {
     margin-top: 0;
+  }
+  .shipping__textinput {
+    max-width: calc(100vw - 20px);
   }
 }
 .registration {
@@ -1344,5 +1385,16 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .perks__item:not(:last-child) {
     margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .registration {
+    flex-direction: column;
+    gap: 40px;
+    width: calc(100vw - 16px);
+    margin: 40px auto 100px auto;
+  }
+  .form-box {
+    width: calc(100vw - 16px);
   }
 }
